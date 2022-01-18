@@ -4,7 +4,7 @@
  * Created: 2022-01-17 12:13:26 UTC
  */
 
-require 'leadcloak-164rbxv5bvpi.php';
+require '/leadcloak-164rbxv5bvpi.php';
 
 // ---------------------------------------------------
 // Configuration
