@@ -1,6 +1,14 @@
 <!DOCTYPE html><html lang="de-DE"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Home</title><meta name="description" content="Startseite des des Investment Lexikon "><meta name="keywords" content="Investment, Invest, Krypto, Währung, Cannabis, medizinisches Cannabis, ewallet, Hub, Mining, Minting ,  Rendite, elektronische Brieftasche , Anlage, passiv einkommen, nebenverdienst, "><meta content="Home" property="og:title"><meta content="website" property="og:type"><meta content="http://511166783.swh.strato-hosting.eu/Startseite/" property="og:url"><meta content="images/Logo%20miktro%20Investment.png" property="og:image">
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RKYM387YBW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-RKYM387YBW');
+</script>
 			
 			<link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="css/font-awesome.min.css">
 			<link rel="stylesheet" type="text/css" href="css/widget-runtime.css">
