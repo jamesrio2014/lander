@@ -1,36 +1,3 @@
-<?php
-/**
- * Campaign: GoogleT1
- * Created: 2022-01-17 12:13:26 UTC
- */
-
-require '/leadcloak-164rbxv5bvpi.php';
-
-// ---------------------------------------------------
-// Configuration
-
-// Set this to false if application is properly installed.
-$enableDebugging = false;
-
-// Set this to false if you won't want to log error messages
-$enableLogging = true;
-
-if ($enableDebugging) {
-	isApplicationReadyToRun();
-}
-
-$data = httpRequestMakePayload($campaignId, $campaignSignature);
-
-$response = httpRequestExec($data);
-
-$handler = httpHandleResponse($response, $enableLogging);
-
-if ($handler) {
-	exit();
-}
-
-?>
-
 <!DOCTYPE html><html lang="de-DE"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Home</title><meta name="description" content="Startseite des des Investment Lexikon "><meta name="keywords" content="Investment, Invest, Krypto, Währung, Cannabis, medizinisches Cannabis, ewallet, Hub, Mining, Minting ,  Rendite, elektronische Brieftasche , Anlage, passiv einkommen, nebenverdienst, "><meta content="Home" property="og:title"><meta content="website" property="og:type"><meta content="http://511166783.swh.strato-hosting.eu/Startseite/" property="og:url"><meta content="images/Logo%20miktro%20Investment.png" property="og:image">
 
 
